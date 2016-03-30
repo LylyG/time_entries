@@ -1,5 +1,5 @@
 class TimeEntriesController < ApplicationController
-  before_action :set_time_entries, only: [:show, :edit, :update, :destroy]
+  before_action :set_timeentry, only: [:show, :edit, :update, :destroy]
 
   def index
     @timeentries = TimeEntry.all
@@ -38,6 +38,6 @@ class TimeEntriesController < ApplicationController
     end
 
     def timeentry_params
-      params.require(:timeentry).permit(:duration, :date)
+      params.require(:time_entry).permit(:duration, :date, :developer_id, :project_id)
     end
 end

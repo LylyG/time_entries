@@ -1,2 +1,22 @@
-<h1>TimeEntries#show</h1>
-<p>Find me in app/views/time_entries/show.html.erb</p>
+<h1>Time Entries</h1>
+
+<p>
+  <strong>Developer Name:</strong>
+  <%= @timeentry.developer.name %>
+</p>
+
+
+<p>
+  <strong>Project Name:</strong>
+  <%= @timeentry.project.name %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @timeentry.duration %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @timeentry.date %>
+</p>

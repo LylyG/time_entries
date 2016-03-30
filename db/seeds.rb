@@ -6,4 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-d1 = Developer.create(email: "developer@developer.com", name: "Mason", password_digest: "password")
+developer1 = Developer.create(email: "developer@developer.com", name: "Mason Matthews", password_digest: "password")
+
+developer2 = Developer.create(email: "lyly@developer.com", name: "Lyly", password_digest: "password")
+
+project1 = Project.create(name: "BlackJack")
+
+project2 = Project.create(name: "Survey Possum")

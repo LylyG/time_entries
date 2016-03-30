@@ -1,1 +1,42 @@
-<p>Was this partial successfully rendered?</p>
+<%= form_for(@timeentry) do |f| %>
+  <% if @timeentry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@timeentry.errors.count, "error") %> prohibited this timeentry from being saved:</h2>
+
+      <ul>
+      <% @timeentry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :developer_id %><br>
+    <%= f.collection_select :developer_id, Developer.all, :id, :name, :prompt => "Select a Name"%>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :project_id %><br>
+    <%= f.collection_select :project_id, Project.all, :id, :name, :prompt => "Select a Project" %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.text_field :duration, placeholder: "In hours" %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_field :project_id, placeholder: "Enter a new project" %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <br>
+
+<% end %>

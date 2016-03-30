@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :time_entries
 
+  resources :projects
+
   resources :developers
 
   # The priority is based upon order of creation: first created -> highest priority.
